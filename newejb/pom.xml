@@ -80,12 +80,10 @@
 		</dependency>
 	</dependencies>
 	<repositories>
-
 		<repository>
 			<id>JBOSS_NEXUS</id>
 			<url>http://repository.jboss.org/nexus/content/groups/public</url>
 		</repository>
-
 		<repository>
 			<id>jboss-deprecated</id>
 			<name>JBoss deprecated -remove me soon-</name>
@@ -151,6 +149,9 @@
 		</profile>
 		<profile>
 			<id>jbossas-managed-6</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<dependencies>
 				<dependency>
 					<groupId>org.jboss.arquillian.container</groupId>
