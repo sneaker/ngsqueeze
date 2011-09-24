@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:mj="http://mojarra.dev.java.net/mojarra_ext">
+
+<f:metadata>
+	<f:viewParam name="trackid" value="#{editbean.trackid}" />
+	<f:viewParam name="track" value="#{editbean.track}" />
+	<f:viewParam name="artistid" value="#{editbean.artistid}" />
+	<f:viewParam name="artist" value="#{editbean.artist}" />
+</f:metadata>
+
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">Track Editing</ui:define>
+	<ui:define name="pageHeader">Edit Track</ui:define>
+	<ui:define name="body">
+		<h:form>
+			<h:outputText value="The Track id:" />
+			<h:inputText id="trackid" value="#{editbean.trackid}" disabled="true"/>
+			<h:outputLabel value="Track title:" />
+			<h:inputText id="track" value="#{editbean.track}" />
+			<br />
+			<h:outputText value="The Artist Id:"/>
+			<h:inputText id="artistid" value="#{editbean.artistid}" disabled="true" /> 
+			<h:outputLabel value="Artist:" />
+			<h:inputText id="artist" value="#{editbean.artist}"/><br/>
+			<h:outputText value="If Artist are the same, merge them!" />
+			<h:selectBooleanCheckbox id="merge" value="#{editbean.merge}"/>
+			<br />
+			<h:commandButton value="Save!" action="#{editbean.save}">
+			</h:commandButton>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+</html>

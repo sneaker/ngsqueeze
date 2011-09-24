@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">Search music</ui:define>
+	<ui:define name="pageHeader">
+		<h1>Music Search</h1>
+	</ui:define>
+	<ui:define name="body">
+		<h:form id="searchform">
+			<h:outputLabel value="Searchkriteria:" />
+			<h:inputText id="search" value="#{searchBean.keyword}" />
+			<h:commandButton action="#{searchBean.getResults}" value="Search!" />
+			<hr />
+			<h:dataTable border="2" bgcolor="white" id="result"
+				value="#{searchBean.tracks}" var="track">
+				<h:column>#{track.name}</h:column>
+				<h:column>#{track.artist.name}</h:column>
+				<h:column>
+					<h:link outcome="edit" value="Edit">
+						<f:param name="trackid" value="#{track.id}" />
+						<f:param name="track" value="#{track.name}"/>
+						<f:param name="artistid" value="#{track.artist.id}" />
+						<f:param name="artist" value="#{track.artist.name}" />
+					</h:link>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+</html>

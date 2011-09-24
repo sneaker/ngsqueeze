@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+	<ui:composition template="/templates/common.xhtml">
+			<ui:define name="pageTitle">Index Directory</ui:define>
+			<ui:define name="pageHeader">Index Directory</ui:define>
+			<ui:define name="body">
+				<h:form id="indexerForm">
+				<h:inputText value="#{indexBean.path}" />
+					<h:commandButton value="Index Directory!" action="#{indexBean.indexDir}" />
+				</h:form>
+			</ui:define>
+	</ui:composition>
+
+</html>
