@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>newear</groupId>
+		<artifactId>newear</artifactId>
+		<version>0.0.2-SNAPSHOT</version>
+	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.tdc.javaee.arquillian</groupId>
-	<artifactId>arquillian-testcase</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<groupId>ngsqueeze</groupId>
+	<artifactId>newejb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<shrinkwrap.version>1.0.0-beta-6</shrinkwrap.version>
+		<shrinkwrap.descriptors.version>1.2.0-alpha-1</shrinkwrap.descriptors.version>
 	</properties>
 	<dependencies>
-		<!-- <dependency> <groupId>org.jboss.spec</groupId> <artifactId>jboss-javaee-6.0</artifactId> 
-			<version>1.0.0.Final</version> <scope>provided</scope> <type>pom</type> </dependency> -->
-
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
@@ -54,28 +55,28 @@
 		<dependency>
 			<groupId>org.jboss.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-api</artifactId>
-			<scope>test</scope>
 			<version>${shrinkwrap.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.shrinkwrap.descriptors</groupId>
 			<artifactId>shrinkwrap-descriptors-spi</artifactId>
-			<version>1.2.0-alpha-1</version>
+			<version>${shrinkwrap.descriptors.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.shrinkwrap.descriptors</groupId>
 			<artifactId>shrinkwrap-descriptors-impl-base</artifactId>
-			<version>1.2.0-alpha-1</version>
+			<version>${shrinkwrap.descriptors.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.shrinkwrap.descriptors</groupId>
 			<artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
-			<version>1.2.0-alpha-1</version>
+			<version>${shrinkwrap.descriptors.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.shrinkwrap.descriptors</groupId>
 			<artifactId>shrinkwrap-descriptors-impl-jboss</artifactId>
-			<version>1.2.0-alpha-1</version>
+			<version>${shrinkwrap.descriptors.version}</version>
 		</dependency>
 	</dependencies>
 	<repositories>
@@ -107,8 +108,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>
