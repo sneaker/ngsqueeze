@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
-import ch.nomoresecrets.ngsqueeze.player.IPlayer;
+import ch.nomoresecrets.ngsqueeze.api.IPlayer;
 
 @ManagedBean(name = "playBean")
 @RequestScoped

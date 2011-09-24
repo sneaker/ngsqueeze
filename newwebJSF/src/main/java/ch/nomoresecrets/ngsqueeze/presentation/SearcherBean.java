@@ -6,8 +6,8 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import ch.nomoresecrets.ngsqueeze.api.ISearchable;
 import ch.nomoresecrets.ngsqueeze.domain.Track;
-import ch.nomoresecrets.ngsqueeze.search.ISearchable;
 
 @ManagedBean(name = "searchBean")
 @RequestScoped

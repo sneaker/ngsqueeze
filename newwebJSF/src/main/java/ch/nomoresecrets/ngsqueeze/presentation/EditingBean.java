@@ -4,7 +4,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import ch.nomoresecrets.ngsqueeze.editor.IEditor;
+import ch.nomoresecrets.ngsqueeze.api.IEditor;
 
 @ManagedBean(name = "editbean")
 @RequestScoped

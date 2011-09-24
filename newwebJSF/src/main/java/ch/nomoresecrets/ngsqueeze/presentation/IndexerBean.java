@@ -4,7 +4,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 
-import ch.nomoresecrets.ngsqueeze.indexer.IMyIndexer;
+import ch.nomoresecrets.ngsqueeze.api.IMyIndexer;
 
 @ManagedBean(name="indexBean")
 @RequestScoped
