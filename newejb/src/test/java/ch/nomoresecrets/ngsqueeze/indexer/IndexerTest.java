@@ -76,7 +76,7 @@ public class IndexerTest {
 		List<Track> tracks = em.createQuery("select t from Track t",
 				Track.class).getResultList();
 		System.out.println("found: " + tracks.size() + " tracks");
-		Assert.assertEquals(28, tracks.size());
+		Assert.assertEquals(29, tracks.size());
 		utx.commit();
 	}
 }
